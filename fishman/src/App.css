@@ -1,0 +1,1279 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/*
+-webkit-animation: fade-in-bottom 0.6s ease-in-out both;
+  animation: fade-in-bottom 0.6s ease-in-out both;
+*/
+
+@-webkit-keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* header style */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: beige;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 60px;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.logo a {
+  text-decoration: none;
+  background: -webkit-linear-gradient(#e28204, #cf1512);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.right__nav {
+  display: flex;
+  align-items: center;
+}
+
+.right__nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.right__nav li {
+  margin-left: 20px;
+}
+
+.right__nav li a {
+  text-decoration: none;
+  color: #cf1512;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.right__nav li a:hover {
+  color: #a00c0c;
+}
+
+.mobile__toggle {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+}
+
+.mobile__toggle .toggle__bar {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 4px 0;
+}
+
+.logout {
+  background: none;
+  border: none;
+  color: #cf1512;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.logout:hover {
+  color: #a00c0c;
+}
+
+@media (max-width: 768px) {
+  .right__nav ul {
+    display: none;
+    flex-direction: column;
+  }
+  .right__nav.open ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    text-align: center;
+    top: 60px;
+    right: 0px;
+    z-index: 999;
+    background-color: beige;
+    width: 160px;
+    padding: 10px;
+  }
+
+  .right__nav.open ul li {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+  }
+  .mobile__toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    z-index: 999;
+    cursor: pointer;
+  }
+
+  .mobile__toggle .toggle__bar {
+    width: 25px;
+    height: 3px;
+    background-color: #a00c0c;
+    margin: 4px 0;
+  }
+}
+
+/* footer style */
+
+.footer {
+  background-color: beige;
+  padding: 40px;
+  text-align: center;
+  width: 100%;
+  height: 250px;
+}
+
+.footer-content {
+  text-align: center;
+}
+
+.footer-content h3 {
+  font-weight: bold;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.footer-content p {
+  font-size: 15px;
+  margin-bottom: 10px;
+  color: #cf1512;
+  font-weight: bolder;
+}
+
+/* Homepage style */
+
+.home-section {
+  background-image: url("./pic/main.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-section h1 {
+  font-size: 50px;
+  font-weight: bold;
+  color: #cf1512;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 10px;
+  width: 50%;
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.5s ease;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.home-section p {
+  font-size: 20px;
+  color: #cf1512;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 10px;
+  width: 50%;
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.5s ease;
+}
+
+.home-section a {
+  color: #cf1512;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.5s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.home-section a:hover {
+  color: white;
+  background-color: #cf1512;
+}
+
+.about__menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 100%;
+  height: 130vh;
+}
+
+.about__menu h1 {
+  font-size: 50px;
+  font-weight: bold;
+  color: #cf1512;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 10px;
+  width: 50%;
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.5s ease;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.5s ease;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 300px;
+  height: 350px;
+}
+
+.card img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 16px;
+  text-align: center;
+}
+
+/* about us page */
+
+.about__us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 100%;
+  height: 100vh;
+}
+
+.about__us h1 {
+  font-size: 50px;
+  font-weight: bold;
+  color: #cf1512;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 10px;
+  width: 50%;
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.5s ease;
+}
+
+.cards__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.5s ease;
+}
+
+.about__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 300px;
+  height: 450px;
+}
+
+.about__card h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.about__card p {
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Booking page */
+
+.book__table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  width: 100%;
+  height: 70vh;
+}
+
+.book__table h1 {
+  font-size: 50px;
+  font-weight: bold;
+  color: #cf1512;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 10px;
+  width: 50%;
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.5s ease;
+}
+
+.book__table form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.5s ease;
+}
+
+#booking {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.5s ease;
+}
+
+.book__table button {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #cf1512;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  width: 10%;
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.5s ease;
+}
+
+.book__table button:hover {
+  background-color: #a00c0c;
+}
+
+.book__table input[type="date"],
+.book__table input[type="text"],
+.book__table input[type="time"],
+.book__table input[type="email"],
+.book__table input[type="number"] {
+  width: 50%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.5s ease;
+  text-align: center;
+}
+
+.book__table input[type="text"],
+.book__table input[type="date"],
+.book__table input[type="time"],
+.book__table input[type="email"],
+.book__table input[type="number"]:placeholder-shown {
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* login */
+
+.login__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 100%;
+  height: 70vh;
+}
+
+.login__container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.5s ease;
+}
+
+.login__container form h1 {
+  font-size: 50px;
+  font-weight: bold;
+  color: #cf1512;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 10px;
+  width: 50%;
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.5s ease;
+}
+
+.login__container form button {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #cf1512;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  width: 10%;
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.5s ease;
+}
+
+.login__container form button:hover {
+  background-color: #a00c0c;
+}
+
+.login__container form input {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  border: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  width: 50%;
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.5s ease;
+}
+
+.login__container form input::placeholder {
+  text-align: center;
+  font-weight: bold;
+}
+
+.login__container form input:focus {
+  outline: #000;
+}
+
+.login__container form p {
+  color: black;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.login__container form p a {
+  color: #cf1512;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* register */
+
+.register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 100%;
+  height: 70vh;
+}
+
+.register h1 {
+  font-size: 50px;
+  font-weight: bold;
+  color: #cf1512;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 10px;
+  width: 50%;
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.5s ease;
+}
+
+.register form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.5s ease;
+}
+
+.register input {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  width: 50%;
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.5s ease;
+}
+
+.register button {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #cf1512;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  width: 10%;
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.5s ease;
+}
+
+.register button:hover {
+  background-color: #a00c0c;
+}
+
+.register input[type="text"],
+.register input[type="password"],
+.register input[type="email"] {
+  width: 50%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.5s ease;
+}
+
+.register p {
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.register p a {
+  color: #cf1512;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Add-Item-Menu */
+
+.add__item__menu__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  width: 100%;
+  height: 70vh;
+}
+
+.add__item__menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.5s ease;
+}
+
+.add__item__menu button {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #cf1512;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  width: 30%;
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.5s ease;
+}
+
+.add__item__menu button:hover {
+  background-color: #a00c0c;
+}
+
+.add__item__menu h1 {
+  font-size: 50px;
+  font-weight: bold;
+  color: #cf1512;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 10px;
+  width: 50%;
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.5s ease;
+}
+
+.add__item__menu form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.5s ease;
+}
+
+.add__item__menu input {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  width: 50%;
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.5s ease;
+  text-align: center;
+}
+
+.add__item__menu input:placeholder-shown {
+  font-weight: bold;
+}
+
+
+.alert {
+  color: red;
+  font-weight: bold;
+}
+
+.alert p {
+  color: red;
+  font-weight: bold;
+}
+
+/* Admin Panel */
+
+.admin__panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  width: 100%;
+  height: auto;
+}
+
+.admin__panel h1 {
+  font-size: 50px;
+  font-weight: bold;
+  color: #cf1512;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 10px;
+  width: 50%;
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.5s ease;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.5s ease;
+  margin: 20px 0;
+}
+
+.tabs button {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #cf1512;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0 10px;
+  width: 10%;
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.5s ease;
+}
+
+.tabs button:hover {
+  background-color: #a00c0c;
+}
+
+.tab-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.5s ease;
+}
+
+.content__details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.5s ease;
+}
+
+.content__details h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #cf1512;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 10px;
+  width: 20%;
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.5s ease;
+}
+
+.content__details .cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.5s ease;
+}
+
+.content__details .cards .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  height: auto;
+  margin: 10px;
+  animation: slideUp 1s ease-in-out;
+  transition: all 1s ease;
+}
+
+.content__details .cards .card h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+  width: 100%;
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.5s ease;
+}
+
+.content__details .cards .card p {
+  font-size: 15px;
+  font-weight: bold;
+  color: #000;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.5s ease;
+}
+
+.content__details .cards .card p span {
+  font-size: 15px;
+  font-weight: bold;
+  color: #cf1512;
+}
+
+.content__details .cards .card h3 span {
+  font-size: 20px;
+  font-weight: bold;
+  color: #cf1512;
+}
+
+.content__details .cards .card:hover {
+  transform: scale(1.05);
+}
+
+.content__details button {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #cf1512;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 10px 10px 10px 0;
+  width: 30%;
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.5s ease;
+}
+
+.content__details button:hover {
+  background-color: #a00c0c;
+}
+
+.content__details input[type="text"],
+.content__details input[type="email"],
+.content__details input[type="number"],
+.content__details input[type="date"],
+.content__details input[type="time"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.5s ease;
+}
+
+.content__details select {
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.5s ease;
+}
+
+.content__details label {
+  font-weight: bold;
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.5s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+/* our menu */
+
+.menu__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 90px;
+  width: 100%;
+  height: 100vh;
+}
+
+.menu__container h1 {
+  font-size: 50px;
+  font-weight: bold;
+  color: #cf1512;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 10px;
+  width: 50%;
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.5s ease;
+}
+
+.card__container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.5s ease;
+}
+
+.menu__item__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  width: 300px;
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.5s ease;
+}
+
+.menu__item__card img {
+  width: 100%;
+  height: auto;
+}
+
+.menu__item__card p {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.menu__item__card strong {
+  color: #cf1512;
+}
+
+.menu__item__card button {
+  background-color: #cf1512;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.menu__item__card button:hover {
+  background-color: #000;
+}
+
+.menu__item__card label {
+  font-weight: bold;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu__item__card input[type="number"],
+.menu__item__card input[type="text"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 10px;
+  margin-right: 10px;
+  width: 100%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.5s ease;
+}
+
+.menu__item__card input[type="file"] {
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+/* profile */
+
+.profile__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 150px;
+  margin-bottom: 40px;
+  width: 100%;
+  height: 70vh;
+}
+
+.profile__container h1 {
+  font-size: 50px;
+  font-weight: bold;
+  color: #cf1512;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 10px;
+  width: 50%;
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.5s ease;
+}
+
+.profile__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 400px;
+  height: 300px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.5s ease;
+}
+
+.profile__card p {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.profile__card strong {
+  color: #cf1512;
+}
+
+.profile__container label {
+  font-weight: bold;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile__container input[type="text"],
+.profile__container input[type="email"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 10px;
+  margin-right: 10px;
+  width: 100%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.5s ease;
+}
+
+.form__button {
+  background-color: #cf1512;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.form__button:hover {
+  background-color: #000;
+}
+
+.profile__card button {
+  background-color: #cf1512;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.profile__card button:hover {
+  background-color: #000;
+}
+
+/* My Bookings */
+
+.my__bookings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  width: 100%;
+  height: 100vh;
+}
+
+.my__bookings h1 {
+  font-size: 50px;
+  font-weight: bold;
+  color: #cf1512;
+  text-align: center;
+  margin-bottom: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 10px;
+  width: 50%;
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.5s ease;
+}
+
+.user__booking {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.user__booking p {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.5s ease;
+}
+
+.user__booking p span {
+  font-size: 18px;
+  font-weight: bold;
+  color: #cf1512;
+}
+
+.user__booking button {
+  background-color: #cf1512;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.user__booking button:hover {
+  background-color: #000;
+}
+
+.user__booking label {
+  font-weight: bold;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.user__booking input[type="text"],
+.user__booking input[type="email"],
+.user__booking input[type="number"],
+.user__booking input[type="date"],
+.user__booking input[type="time"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 10px;
+  margin-right: 10px;
+  width: 100%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  animation: slideUp 1s ease-in-out;
+  transition: all 0.5s ease;
+}
